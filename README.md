@@ -1,10 +1,9 @@
-README.md
 
-####Hello Falmouth University!####
+####Hello Falmouth University!
 
-##Project for technical support officer##
+##Project for technical support officer
 
-#Initial assessment: #
+#Initial assessment: 
 **Some initial thoughts regarding the requirements for this project:**
 	Like any project this one is really a series of small projects. Generally when approaching this (or any seemingly complex problem, really) I find it advisable to break the problem down into “bite sized chunks” in order to figure out the best tools for each step.
 	So what does this app require of us? We need to write a program that does each of the following steps:
