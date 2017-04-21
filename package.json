@@ -1,0 +1,23 @@
+{
+  "name": "falmouth_u_codingtest",
+  "version": "1.0.0",
+  "description": "Falmouth coding test",
+  "main": "falmouth_u_codingtest.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "faced": "^1.2.0",
+    "gm": "^1.23.0",
+    "glob": "^7.1.1",
+    "wildcard": "^1.1.2"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}
