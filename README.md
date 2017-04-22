@@ -4,12 +4,13 @@
 <h2>Project for technical support officer </h2>
 
 <h1>Initial assessment:</h2> 
-**Some initial thoughts regarding the requirements for this project:**
-	
+<p><b>Some initial thoughts regarding the requirements for this project:</b></p>
+<p>
 	Like any project this one is really a series of small projects. Generally when approaching this (or any seemingly complex problem, really) I find it advisable to break the problem down into “bite sized chunks” in order to figure out the best tools for each step.
 	So what does this app require of us? We need to write a program that does each of the following steps:
-A modelling company has a large number of full-length high-resolution images of their models (for examples, you can search shutterstock.com for “full length man” or “full length woman”)
-
+</p>
+<i>A modelling company has a large number of full-length high-resolution images of their models (for examples, you can search shutterstock.com for “full length man” or “full length woman”)</i>
+<p>
 	1.	Store modelling shots
 	<ul>
 		  <li> How much storage? The requirement reads that the company _“…has a large number of full-length high-resolution images of their models“_.</li> 
@@ -17,6 +18,7 @@ A modelling company has a large number of full-length high-resolution images of 
 		  <li>This would negate the need for a super advanced NOSQL solution like Hadoop. MongoDB might work (the document based structure would dovetail nicely with the requirement that each model have a single document)…but this would add an unnecessary level of complexity. Sticking with the philosophy of K.I.S.S (Keep It Simple, Stupid) I would choose a **MYSQL** solution for this—MYSQL is broadly available and getting coding help with it is extremely easy. It works well with most front-end technologies and writing an Object Relational Mapper for MYSQL is simple as there is lots of publicly available code that does that in most languages (why re-invent the wheel)? </li>
 		  <li>However, for a particular brief, they need to select the models for close-up face shots. They would like to be able to scroll through all the faces cropped out of the high-resolution images with a single click to access the original image, so that they can find the right ones to present to their client.</li>
     </ul>
+</p>
 2.	Retrieve modelling shots:
 	  <ul>
 	  		<li>So the design here is: Show image A (the full body shot of the model) and retrieve image B (the “face shot” of the model) when image A is clicked on. This would mean mapping multiple values in a key->value store. We can probably speed this whole process up if we have a MYSQL back end pushing out key->value stores to a REDIS cache which would provide near instant return of values. Even better- let’s set up something that can work asynchronously. So the storage would be: **MYSQL -> REDIS -> Node.js** (excellent facial recognition library)</li>
@@ -51,5 +53,5 @@ A modelling company has a large number of full-length high-resolution images of 
 		<li>I am a big fan of the K.I.S.S (Keep It Simple, Stupid) principle. Using node.js allows me to keep a single language (javascript) and do most of the interactions on the front end as needed. In addition to node, to keep things organized, I will need a decent framework. Sails.js offers an excellent, lightweight framework for me to work from.</li>
 		<li>For testing I will be using the mocha.js library for node.js</li>
 	   <li> In addition- it’s got a great facial recognition library that will allow me to process and find faces extremely efficiently: **faced**</li>
-   </ul>
+   </u
 
